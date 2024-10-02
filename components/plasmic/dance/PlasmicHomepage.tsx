@@ -254,6 +254,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty.link__oNtNp
                     )}
                     component={Link}
+                    href={"https://Twitter.com/Moodancesol"}
                     platform={"nextjs"}
                   >
                     <TwitterSvgrepoComSvgIcon
@@ -268,6 +269,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty.link__owKuV
                     )}
                     component={Link}
+                    href={"https://t.me/Moodancesol"}
                     platform={"nextjs"}
                   >
                     <TelegramSvgrepoComSvgIcon
