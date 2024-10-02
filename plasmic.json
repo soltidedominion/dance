@@ -7,7 +7,7 @@
   },
   "style": {
     "scheme": "css-modules",
-    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.css"
+    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.module.css"
   },
   "images": {
     "scheme": "public-files",
@@ -77,7 +77,8 @@
           "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "4kR15ceUPuzPRhk7Bbrpxi",
@@ -128,6 +129,11 @@
           "id": "APbt_cqBgEBo",
           "name": "dex-screener-logo-png_seeklogo-527276 (1).png",
           "filePath": "../public/plasmic/dance/images/dexScreenerLogoPngSeeklogo5272761Png.png"
+        },
+        {
+          "id": "jcZ2ZO-APhhJ",
+          "name": "photo_2024-10-02_13-22-45.jpg",
+          "filePath": "../public/plasmic/dance/images/photo20241002132245Jpg.jpg"
         }
       ],
       "indirect": false,

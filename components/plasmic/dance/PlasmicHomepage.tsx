@@ -60,6 +60,7 @@ import {
 } from "@plasmicapp/react-web/lib/host";
 
 import { Video } from "@plasmicpkgs/plasmic-basic-components";
+import { PlasmicHead } from "@plasmicapp/react-web";
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
@@ -89,6 +90,7 @@ export type PlasmicHomepage__OverridesType = {
   h4?: Flex__<"h4">;
   text?: Flex__<"div">;
   freeBox?: Flex__<"div">;
+  pageMetadataOverride?: Flex__<typeof PlasmicHead>;
 };
 
 export interface DefaultHomepageProps {}
@@ -304,6 +306,16 @@ function PlasmicHomepage__RenderFunc(props: {
               </div>
             </div>
           </section>
+          <PlasmicHead
+            data-plasmic-name={"pageMetadataOverride"}
+            data-plasmic-override={overrides.pageMetadataOverride}
+            className={classNames("__wab_instance", sty.pageMetadataOverride)}
+            description={
+              "Moodance is way more than just a meme token. It\u2019s your ticket to the coolest Dance Club around, where you can vibe, have a blast, and share all the viral fun while we aim for the top. Moo Dang\u2019s got the moves, and we\u2019ve got the community to back it up!"
+            }
+            image={"/plasmic/dance/images/photo20241002132245Jpg.jpg"}
+            title={"MooDance on SOL"}
+          />
         </div>
       </div>
     </React.Fragment>
@@ -319,7 +331,8 @@ const PlasmicDescendants = {
     "h1",
     "h4",
     "text",
-    "freeBox"
+    "freeBox",
+    "pageMetadataOverride"
   ],
   section: ["section", "columns", "htmlVideo", "h1", "h4", "text", "freeBox"],
   columns: ["columns", "htmlVideo", "h1", "h4", "text", "freeBox"],
@@ -327,7 +340,8 @@ const PlasmicDescendants = {
   h1: ["h1"],
   h4: ["h4"],
   text: ["text"],
-  freeBox: ["freeBox"]
+  freeBox: ["freeBox"],
+  pageMetadataOverride: ["pageMetadataOverride"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -341,6 +355,7 @@ type NodeDefaultElementType = {
   h4: "h4";
   text: "div";
   freeBox: "div";
+  pageMetadataOverride: typeof PlasmicHead;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -410,6 +425,7 @@ export const PlasmicHomepage = Object.assign(
     h4: makeNodeComponent("h4"),
     text: makeNodeComponent("text"),
     freeBox: makeNodeComponent("freeBox"),
+    pageMetadataOverride: makeNodeComponent("pageMetadataOverride"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
