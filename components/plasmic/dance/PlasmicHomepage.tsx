@@ -284,6 +284,9 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty.link__si4Z6
                     )}
                     component={Link}
+                    href={
+                      "https://dexscreener.com/solana/fiwkq3vqgdnokzjrrx69nbrmcd52tqeox54mjcm1g45t"
+                    }
                     platform={"nextjs"}
                   >
                     <PlasmicImg__
