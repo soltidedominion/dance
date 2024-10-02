@@ -99,7 +99,7 @@
   width: 100%;
   height: auto;
   max-width: 100%;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   min-width: 0;
 }
@@ -121,11 +121,16 @@
   object-fit: cover;
 }
 .htmlVideo:global(.__wab_instance) {
-  width: 80%;
+  width: 60%;
   height: auto;
-  max-width: 100%;
   object-fit: cover;
   z-index: 2;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .htmlVideo:global(.__wab_instance) {
+    width: 100%;
+    min-width: 0;
+  }
 }
 .column__vAudY {
   display: flex;
